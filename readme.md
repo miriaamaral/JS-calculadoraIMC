@@ -20,12 +20,11 @@ Eu queria que o resultado do IMC tivesse apenas duas casas decimais para ficar v
 
 ```javascript
 // O método .toFixed(2) retorna uma STRING!
-const imcString = (peso / (altura * altura)).toFixed(2); // Retorna "25.95" (texto)
+const imc = (peso / (altura * altura)).toFixed(2); // Retorna "25.95" (0 que era Number agora virou type = String)
 
 // Se eu deixasse assim, poderia gerar bugs silenciosos no futuro (ex: tentar somar esse valor e acabar concatenando texto). 
-// Para resolver isso e manter a consistência dos dados, envolvi a operação no construtor Number():
+// Para resolver isso e manter a consistência dos dados, envolvi a operação no Number():
 
-// Solução robusta:
 const imc = Number((peso / (altura * altura)).toFixed(2));
 ```
 **Resultado:** Consegui limitar as casas decimais visualmente sem abrir mão da tipagem correta (`number`). Isso garante que meu código seja mais seguro e previsível.
@@ -49,9 +48,9 @@ switch (true) {
 
 **A vantagem dessa abordagem:**
 
-* **Legibilidade:** Cada caso funciona como uma "regra" clara e isolada.
+* **Legibilidade:** Cada caso funciona como uma regra clara e isolada.
 * **Manutenção:** É muito mais fácil bater o olho e entender os intervalos numéricos do que ler múltiplos blocos aninhados.
-* **Estética:** O código fica mais organizado e elegante.
+* **Estética:** O código fica mais organizado e bonito.
 
 ---
 ## 💡 Funcionalidades
@@ -77,15 +76,15 @@ Explore outros desafios onde apliquei lógica e interatividade!
 <br>
 <div align="center">
     <a href="https://github.com/miriaamaral/JS-Jogo-Detona-Ralph" target="_blank" style="text-decoration: none;">
-        <img src="https://github.com/miriaamaral/JS-Jogo-Detona-Ralph/raw/main/assets/img/thumb-detona-ralph.png" alt="Miniatura do Projeto Jogo Detona Ralph" width="300px" style="border-radius: 8px; margin: 10px;">
+        <img src="https://github.com/miriaamaral/JS-Jogo-Detona-Ralph/raw/main/assets/img/thumb-detona-ralph.png" alt="Projeto: Jogo Detona Ralph" width="300px" style="border-radius: 8px; margin: 10px;">
         <p style="color: #B18B77; font-weight: bold;">Jogo Detona Ralph</p>
     </a>
     <a href="https://github.com/miriaamaral/JS-Jogo-da-Memoria" target="_blank" style="text-decoration: none;">
-        <img src="https://github.com/miriaamaral/JS-Jogo-da-Memoria/raw/main/assets/img/thumb-jogo-da-memoria.png" alt="Miniatura do Projeto Jogo da Memória" width="300px" style="border-radius: 8px; margin: 10px;">
+        <img src="https://github.com/miriaamaral/JS-Jogo-da-Memoria/raw/main/assets/img/thumb-jogo-da-memoria.png" alt="Projeto: Jogo da Memória" width="300px" style="border-radius: 8px; margin: 10px;">
         <p style="color: #B18B77; font-weight: bold;">Jogo da Memória JS</p>
     </a>
     <a href="https://github.com/miriaamaral/JS-Pokedex" target="_blank" style="text-decoration: none;">
-        <img src="https://github.com/miriaamaral/JS-Pokedex/raw/main/assets/img/thumb-pokedex.png" alt="Miniatura do Projeto Pokedex JS" width="300px" style="border-radius: 8px; margin: 10px;">
+        <img src="https://github.com/miriaamaral/JS-Pokedex/raw/main/assets/img/thumb-pokedex.png" alt="Projeto: Pokedex JS" width="300px" style="border-radius: 8px; margin: 10px;">
         <p style="color: #B18B77; font-weight: bold;">Pokedex JS</p>
     </a>
 </div>
